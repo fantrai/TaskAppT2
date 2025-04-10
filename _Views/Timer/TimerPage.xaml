@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TaskAppT2._ViewModels.Timer"
+             x:DataType="vm:TimerPageVM"
+             xmlns:models="clr-namespace:TaskAppT2._Models"
+             xmlns:custom="clr-namespace:TaskAppT2.CustomUI"
+             x:Class="TaskAppT2._Views.Timer.TimerPage"
+             Title="TimerPage">
+    <ScrollView Margin="10"
+                HorizontalScrollBarVisibility="Never"
+                VerticalScrollBarVisibility="Never">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Начинай путь с FrogNotes сейчас!"
+                   Margin="30, 50, 30, 0"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Large"/>
+            <Image Source="froge.png"
+                   Margin="0, 50"
+                   x:Name="FrogImg"
+                   Grid.Row="1"/>
+            <Border x:Name="TimeText"
+                    Grid.Row="1"
+                    Margin="0, 50"
+                    IsVisible="False"
+                    StrokeThickness="2"
+                    VerticalOptions="Center"
+                    MinimumWidthRequest="300"
+                    HorizontalOptions="Center"
+                    Stroke="{StaticResource MainUI}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15"/>
+                </Border.StrokeShape>
+                    <Label Text="{Binding TimeText}"
+                       Margin="60, 10"
+                       FontSize="70"/>
+            </Border>
+            <Button Text="Запуск"
+                    x:Name="TimerButt"
+                    Style="{StaticResource Key=GreenColor}"
+                    Clicked="OnChangeState"
+                    FontSize="Title"
+                    FontAttributes="Bold"
+                    CornerRadius="15"
+                    MaximumHeightRequest="70"
+                    MaximumWidthRequest="250"
+                    Command="{Binding StartTimerCommand}"
+                    Grid.Row="2">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup Name="TimerButtState">
+                            <VisualState Name="Start"/>
+                            <VisualState Name="Stop">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="Пауза"/>
+                                    <Setter Property="Command" Value="{Binding StopTimerCommand}"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+
+            <Button Text="Сброс"
+                   Margin="5"
+                   Grid.Row="3"
+                   CornerRadius="10"
+                   MinimumWidthRequest="150"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Clicked="OnFalseChangeState"
+                   Command="{Binding DropTimerCommand}"
+                   BackgroundColor="{StaticResource RedUI}"/>
+
+            <CollectionView Grid.Row="4" 
+                            x:Name="IntervalsCV"
+                            ItemsLayout="VerticalGrid, 2"
+                            ItemsSource="{Binding Intervals}"
+                            Margin="0, 20, 0, 0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="{x:Type models:Interval}">
+                            <Border BackgroundColor="{StaticResource MainUI}"
+                                    Margin="5"
+                                    Grid.ColumnSpan="3"
+                                    Grid.RowSpan="2">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="5"/>
+                                </Border.StrokeShape>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Label Grid.ColumnSpan="3"
+                                       FontSize="Medium"
+                                       FontAttributes="Bold"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource GreenBG}"
+                                       Text="Таймер фокуса">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Type}" Value="0">
+                                            <Setter Property="Text" Value="Таймер перерыва"/>
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                                <custom:EntryWithoutLine Text="{Binding Minutes}"
+                                       TextColor="{StaticResource GreenBG}"
+                                       HorizontalOptions="End"
+                                       FontAttributes="Bold"
+                                       FontSize="Large"
+                                       Grid.Row="1"/>
+                                <custom:EntryWithoutLine Text=":"
+                                       IsEnabled="False"
+                                       TextColor="{StaticResource GreenBG}"
+                                       VerticalOptions="Start"
+                                       FontSize="Large"
+                                       FontAttributes="Bold"
+                                       Grid.Column="1"
+                                       Grid.Row="1"/>
+                                <custom:EntryWithoutLine Text="{Binding Seconds}"
+                                       TextColor="{StaticResource GreenBG}"
+                                       HorizontalOptions="Start"
+                                       FontSize="Large"
+                                       FontAttributes="Bold"
+                                       Grid.Row="1"
+                                       Grid.Column="2"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.Footer>
+                    <VerticalStackLayout HorizontalOptions="Center"
+                                         Spacing="10"
+                                         Margin="0, 10, 0, 0">
+                        <Button Text="Добавить интервалы"
+                        CornerRadius="10"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        Command="{Binding AddIntervalsCommand}"
+                        Style="{DynamicResource Key=GreenColor}"/>
+                        <Button Text="Удалить интервалы"
+                        CornerRadius="10"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        Command="{Binding RemoveIntervalsCommand}"
+                        BackgroundColor="{StaticResource RedUI}"
+                        TextColor="{StaticResource MainUI}"/>
+                    </VerticalStackLayout>
+                </CollectionView.Footer>
+            </CollectionView>
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet"
+             x:DataType="vm:LearnCardSetVM"
+             x:Class="TaskAppT2._Views.Study.FlashCards.LearnCardSet.LearnCrossingPan">
+    <Grid Margin="0, 0, 0, 15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Text="{Binding TimerText}"/>
+        <ProgressBar BackgroundColor="{StaticResource GreenUI}"
+                     Progress="{Binding Progress}"
+                     Grid.Row="1"
+                     HeightRequest="3"
+                     Margin="-15, 0, -15, 10"
+                     ProgressColor="{StaticResource Red}"/>
+
+        <Button Grid.Row="2"
+                BackgroundColor="{StaticResource GreenUI}"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                x:Name="StartButt"
+                Padding="30"
+                MinimumWidthRequest="300"
+                CornerRadius="15"
+                Clicked="OnStart"
+                Command="{Binding StartCrossingCommand}"
+                Text="Старт"/>
+
+        <CollectionView Grid.Row="2"
+                        IsVisible="False"
+                        SelectionMode="Multiple"
+                        x:Name="CardsCV"
+                        SelectionChanged="OnNewSelected"
+                        ItemsLayout="VerticalGrid, 3"
+                        ItemsSource="{Binding CrossCards}">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="vm:CrossCardView">
+                    <Border x:Name="BorderCard"
+                            Margin="5"
+                            Padding="5"
+                            BackgroundColor="{DynamicResource MainUI}"
+                            StrokeThickness="0">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroupList>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Normal"/>
+                                    <VisualState Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter TargetName="BorderCard" Property="Stroke" Value="{StaticResource GreenUI}"/>
+                                            <Setter TargetName="BorderCard" Property="BackgroundColor" Value="{StaticResource MainUI}"/>
+                                            <Setter TargetName="BorderCard" Property="StrokeThickness" Value="5"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateGroupList>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <Label Text="{Binding Text}"
+                        x:Name="TextCard"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        LineBreakMode="CharacterWrap"
+                        MinimumHeightRequest="100"
+                        TextColor="{StaticResource GreenBG}">
+                            <Label.Triggers>
+                                <DataTrigger Binding="{Binding IsTerm}" Value="True" TargetType="Label">
+                                    <Setter Property="FontAttributes" Value="Bold"/>
+                                    <Setter Property="FontSize" Value="Medium"/>
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>            
+        </CollectionView>
+    </Grid>
+</ContentView>

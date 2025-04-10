@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskAppT2.MainMenu.Study.StudyMenuPage"
+             xmlns:custom="clr-namespace:TaskAppT2.CustomUI"
+             xmlns:cards="clr-namespace:TaskAppT2.MainMenu.Study.FlashCards"
+             xmlns:subjects="clr-namespace:TaskAppT2._Views.Study.Subjects"
+             xmlns:teachers="clr-namespace:TaskAppT2._Views.Study.Teachers"
+             Title="StudyMenuPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid BackgroundColor="{StaticResource DarkGreenBG}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <!--<ColumnDefinition/>-->
+            </Grid.ColumnDefinitions>
+
+            <custom:UpTabBarButton 
+                Selected="True"
+                Grid.Column="0"
+                Text="Flash-карты" 
+                GroupName="StudyMainMenuPage" 
+                NumberReturnOnClick="0"/>
+            <custom:UpTabBarButton 
+                Grid.Column="1"
+                Text="Предметы" 
+                GroupName="StudyMainMenuPage" 
+                NumberReturnOnClick="1"/>
+            <!--<custom:UpTabBarButton 
+                Grid.Column="2"
+                Text="Преподаватели" 
+                GroupName="StudyMainMenuPage" 
+                NumberReturnOnClick="2"/>-->
+        </Grid>
+
+        <Grid x:Name="Tabs" Grid.Row="1">
+            <cards:FlashCardsPan/>
+            <subjects:SubjectsPan/>
+            <!--<teachers:MainPageTeachersPan/>-->
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskAppT2.CustomUI.UpTabBarButton">
+    
+    <ContentView.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{DynamicResource GreenBG}"/>
+            <Setter Property="TextColor" Value="{StaticResource MainUI}"/>
+            <Setter Property="CornerRadius" Value="0"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+        </Style>
+
+        <Style TargetType="Border">
+            <Setter Property="StrokeThickness" Value="0"/>
+            <Setter Property="StrokeShape">
+                <RoundRectangle CornerRadius="15, 15, 0, 0"/>
+            </Setter>
+        </Style>
+    </ContentView.Resources>
+
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="TabGroup">
+            <VisualState x:Name="Active">
+                <VisualState.Setters>
+                    <Setter TargetName="butt" Property="BackgroundColor" Value="{DynamicResource GreenBG}" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="NoActive">
+                <VisualState.Setters>
+                    <Setter TargetName="bord" Property="Margin" Value="0, 15, 0, 0"/>
+                    <Setter TargetName="butt" Property="BackgroundColor" Value="{DynamicResource GreenBG2}" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+
+    <Border x:Name="bord">
+        <Button Text="butt" 
+                x:Name="butt" 
+                Clicked="OnClick" 
+                FontSize="Caption"
+                Padding="0, 10"
+                LineBreakMode="CharacterWrap"/>
+    </Border>
+</ContentView>

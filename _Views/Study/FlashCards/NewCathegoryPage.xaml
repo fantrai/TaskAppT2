@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskAppT2._Views.Study.FlashCards.NewCathegoryPage"
+             xmlns:ui="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
+             xmlns:custom="clr-namespace:TaskAppT2.CustomUI"
+             xmlns:models="clr-namespace:TaskAppT2._Models"
+             xmlns:vm="clr-namespace:TaskAppT2._ViewModels.Study.FlashCards"
+             x:DataType="vm:NewCathegoryPageVM"
+             BackgroundColor="Transparent"
+             Title="NewCathegoryPage">
+    <Grid>
+        <ui:AcrylicView EffectStyle="Custom"                        
+                        TintColor="{StaticResource GreenBG}">
+        </ui:AcrylicView>
+        <Border BackgroundColor="{StaticResource MainUI}" 
+                Stroke="{StaticResource GreenBG}"
+                StrokeThickness="3"
+                Padding="10" 
+                Margin="30, 150">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20"/>
+            </Border.StrokeShape>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <custom:EntryWithGreenLine Grid.Row="1"
+                                            FontAttributes="Bold"
+                                            HorizontalOptions="Center"
+                                            MinimumWidthRequest="50"
+                                            FontSize="Large"
+                                            HorizontalTextAlignment="Center"
+                                            TextColor="{StaticResource GreenBG}"
+                                            Text="{Binding NameCathegory}"
+                                            Placeholder="Название папки"/>
+
+                <CollectionView ItemsSource="{Binding CardSet}"
+                                x:Name="CardSetsCv"
+                                HorizontalScrollBarVisibility="Never"
+                                VerticalScrollBarVisibility="Never"
+                                Margin="20, 10"
+                                Grid.Row="2">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="{x:Type models:CardSet}">
+                            <Border StrokeThickness="1"
+                                    Stroke="{StaticResource GreenBG}"
+                                    Padding="5" 
+                                    Margin="0, 5">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="10"/>
+                                </Border.StrokeShape>
+                                <HorizontalStackLayout>
+                                    <CheckBox IsChecked="{Binding CanCathegory}"
+                                           CheckedChanged="OnCheckedSetCathegory"
+                                           Color="{StaticResource  GreenBG}">
+                                    </CheckBox>
+                                    <Label Text="{Binding Name}"
+                                           FontAttributes="Bold"
+                                           TextColor="{StaticResource GreenBG}"
+                                           VerticalOptions="Center">
+
+                                    </Label>
+                                </HorizontalStackLayout>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                    <CollectionView.EmptyView>
+                        <Border StrokeThickness="1"
+                                Stroke="{StaticResource GreenBG}"
+                                Padding="5" 
+                                Margin="0, 5"
+                                Opacity="0.7"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Start">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="5"/>
+                            </Border.StrokeShape>
+                            <Label Text="Все наборы уже в папках!"
+                                   TextColor="{StaticResource GreenBG}"/>
+                        </Border>
+                    </CollectionView.EmptyView>
+                </CollectionView>
+
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Text="Удалить папку"
+                            x:Name="DelButt"
+                            IsEnabled="False"
+                            TextColor="{StaticResource GreenBG}"
+                            BorderColor="{StaticResource GreenBG}"
+                            CornerRadius="10"
+                            Command="{Binding DeleteCathegoryCommand}"
+                            Margin="5">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroupList>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Disabled">
+                                        <VisualState.Setters>
+                                            <Setter Property="Opacity" Value=".5" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Opacity" Value="1" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateGroupList>
+                        </VisualStateManager.VisualStateGroups>
+                    </Button>
+                    <Button Text="Сохранить"
+                            Style="{StaticResource GreenColor}"
+                            Grid.Column="1"
+                            CornerRadius="10"
+                            Margin="5"
+                            Command="{Binding SaveChangeCathegoryCommand}"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>

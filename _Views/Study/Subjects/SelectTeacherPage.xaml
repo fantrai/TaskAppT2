@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ui="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
+             xmlns:custom="clr-namespace:TaskAppT2.CustomUI"
+             xmlns:models="clr-namespace:TaskAppT2._Models"
+             xmlns:vm="clr-namespace:TaskAppT2._ViewModels.Study.Subjects"
+             x:DataType="vm:SelectTeacherPageVM"
+             BackgroundColor="Transparent"
+             x:Class="TaskAppT2._Views.Study.Subjects.SelectTeacherPage"
+             Title="SelectTeacherPage">
+    <Grid>
+        <ui:AcrylicView EffectStyle="Custom"                        
+                        TintColor="{StaticResource GreenBG}">
+        </ui:AcrylicView>
+        <Border BackgroundColor="{StaticResource MainUI}" 
+                Stroke="{StaticResource GreenBG}"
+                StrokeThickness="3"
+                Padding="10" 
+                Margin="30, 150">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20"/>
+            </Border.StrokeShape>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <CollectionView ItemsSource="{Binding Teachers}"
+                                HorizontalScrollBarVisibility="Never"
+                                VerticalScrollBarVisibility="Never"
+                                Margin="20, 10">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="{x:Type models:Teacher}">
+                            <Button Text="{Binding ShortName}"
+                                    CommandParameter="{Binding}"
+                                    x:DataType="{x:Type vm:SelectTeacherPageVM}"
+                                    Command="{Binding SelectTeacherCommand}"/>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                    <CollectionView.EmptyView>
+                        <Border StrokeThickness="1"
+                                Stroke="{StaticResource GreenBG}"
+                                Padding="5" 
+                                Margin="0, 5"
+                                Opacity="0.7"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Start">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="5"/>
+                            </Border.StrokeShape>
+                            <Label Text="Нет преподавателей!"
+                                   TextColor="{StaticResource GreenBG}"/>
+                        </Border>
+                    </CollectionView.EmptyView>
+                </CollectionView>
+
+                <Button Text="Убрать преподавателя"
+                        Style="{StaticResource GreenColor}"
+                        Grid.Column="1"
+                        CornerRadius="10"
+                        Margin="5"
+                        Command="{Binding SelectTeacherCommand}"
+                        CommandParameter="{x:Null}"/>
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>

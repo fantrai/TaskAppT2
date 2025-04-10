@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TaskAppT2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TaskAppT2"
+    xmlns:study="clr-namespace:TaskAppT2.MainMenu.Study"
+    xmlns:timer="clr-namespace:TaskAppT2._Views.Timer"
+    xmlns:writes="clr-namespace:TaskAppT2._Views.Writes"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarHasShadow="False"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="Orange"
+    Shell.TabBarBackgroundColor="{StaticResource DarkGreenBG}"
+    Shell.TabBarForegroundColor="{StaticResource MainUI}"
+    Shell.TabBarUnselectedColor="{StaticResource MainUI}"
+    Title="TaskAppT2">
+
+    <TabBar>
+        <Tab Icon="study.png"
+              Title="учеба">
+            <ShellContent
+            ContentTemplate="{DataTemplate study:StudyMenuPage}"/>
+        </Tab>
+
+        <!--<Tab  Icon="planer.png"
+            Title="планер">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"/>
+        </Tab>-->
+
+        <Tab  Icon="timer.png"
+            Title="таймер">
+            <ShellContent
+            ContentTemplate="{DataTemplate timer:TimerPage}"/>
+        </Tab>
+
+        <Tab  Icon="writes.png"
+            Title="записи">
+            <ShellContent
+            ContentTemplate="{DataTemplate writes:WritePage}"/>
+        </Tab>
+
+        <!--<Tab  Icon="tamagochi.png"
+            Title="тамагочи">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"/>
+        </Tab>-->
+    </TabBar>
+</Shell>

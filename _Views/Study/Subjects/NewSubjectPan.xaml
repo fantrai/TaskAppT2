@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:TaskAppT2._Models"
+             xmlns:vm="clr-namespace:TaskAppT2._ViewModels.Study.Subjects"
+             x:DataType="vm:NewSubjectPanVM"
+             xmlns:custom="clr-namespace:TaskAppT2.CustomUI"
+             x:Class="TaskAppT2._Views.Study.Subjects.NewSubjectPan">
+    <Grid RowSpacing="15"
+          Margin="0, 15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <custom:EntryWithMauiUILine Placeholder="Название*"
+                                    Grid.ColumnSpan="2"
+                                    Text="{Binding SubjName}"
+                                    FontSize="Large"/>
+        <Image Source="house.png"
+               HeightRequest="30"
+               Margin="0, 0, 20, 0"
+               Grid.Row="1"/>
+        <custom:EntryWithMauiUILine Placeholder="Кабинет"
+                                    Grid.Row="1"
+                                    VerticalOptions="Center"
+                                    Grid.Column="1"
+                                    Text="{Binding Room}"
+                                    FontSize="Medium"/>
+        <!--<Image Source="user.png"
+               HeightRequest="30"
+               Margin="0, 0, 20, 0"
+               Grid.Row="2"/>
+        <Button Text="{Binding Teacher.ShortName}"
+                HorizontalOptions="Start"
+                Margin="0"
+                Padding="5"
+                CornerRadius="10"
+                BorderColor="{StaticResource MainUI}"
+                Grid.Row="2"
+                VerticalOptions="Center"
+                Grid.Column="1"
+                Command="{Binding OpenSelectTeacherCommand}"
+                FontSize="Medium">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding Teacher}" Value="{x:Null}">
+                    <Setter Property="Text" Value="Выбрать преводавателя"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>-->
+        <Image Source="book.png"
+               VerticalOptions="Start"
+               HeightRequest="30"
+               Margin="0, 0, 20, 0"
+               Grid.Row="3"/>
+        <custom:EditorWithMauiUILine Placeholder="Заметка"
+                                    PlaceholderColor="{StaticResource MainUI}"
+                                    TextColor="{StaticResource MainUI}"
+                                    Grid.Row="3"
+                                    AutoSize="TextChanges"
+                                    VerticalOptions="Center"
+                                    Grid.Column="1"
+                                    Text="{Binding Note}"
+                                    FontSize="Medium"/>
+        <Button Text="Сохранить"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                MaximumWidthRequest="250"
+                CornerRadius="15"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                Command="{Binding SaveChangesCommand}"
+                Style="{StaticResource Key=GreenColor}"/>
+    </Grid>
+</ContentView>

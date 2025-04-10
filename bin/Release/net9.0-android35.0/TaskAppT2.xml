@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskAppT2</name>
+    </assembly>
+    <members>
+        <member name="T:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.CardSetPanVM">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.CardSetPanVM.Cards">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.CardSetPanVM.NameSet">
+            <inheritdoc/>
+        </member>
+        <member name="T:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.ProgressText">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.Failed">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.ResultFailed">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.Sucsess">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.ResultSucess">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.Progress">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.TextCard">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.ThisCard">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.RandomDescriptions">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.ResultPerProcient">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.TimerText">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.CrossCards">
+            <inheritdoc/>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.rotateCardCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.RotateCardCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.RotateCardCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.RotateCard"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.goNexCardCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.GoNexCardCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.GoNexCardCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.GoNexCard(System.Boolean)"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.checkRequestCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.CheckRequestCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.CheckRequestCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.CheckRequest(System.String)"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.checkRequestDescrCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.CheckRequestDescrCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.CheckRequestDescrCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.CheckRequestDescr(System.String)"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.startCrossingCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.StartCrossingCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.StartCrossingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet.LearnCardSetVM.StartCrossing"/>.</summary>
+        </member>
+        <member name="T:TaskAppT2._ViewModels.Study.FlashCards.MainPageFlashCardsPanVM">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.MainPageFlashCardsPanVM.CardSets">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.MainPageFlashCardsPanVM.CardSetCathegories">
+            <inheritdoc/>
+        </member>
+        <member name="T:TaskAppT2._ViewModels.Study.FlashCards.NewCardSetPanVM">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.NewCardSetPanVM.SetName">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.NewCardSetPanVM.Cards">
+            <inheritdoc/>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Study.FlashCards.NewCardSetPanVM.saveChangesCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Study.FlashCards.NewCardSetPanVM.SaveChangesCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.NewCardSetPanVM.SaveChangesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Study.FlashCards.NewCardSetPanVM.SaveChanges"/>.</summary>
+        </member>
+        <member name="T:TaskAppT2._ViewModels.Study.FlashCards.NewCathegoryPageVM">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.NewCathegoryPageVM.NameCathegory">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.NewCathegoryPageVM.CardSet">
+            <inheritdoc/>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Study.FlashCards.NewCathegoryPageVM.saveChangeCathegoryCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Study.FlashCards.NewCathegoryPageVM.SaveChangeCathegoryCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.NewCathegoryPageVM.SaveChangeCathegoryCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Study.FlashCards.NewCathegoryPageVM.SaveChangeCathegory"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Study.FlashCards.NewCathegoryPageVM.deleteCathegoryCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Study.FlashCards.NewCathegoryPageVM.DeleteCathegoryCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.FlashCards.NewCathegoryPageVM.DeleteCathegoryCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Study.FlashCards.NewCathegoryPageVM.DeleteCathegory"/>.</summary>
+        </member>
+        <member name="T:TaskAppT2._ViewModels.Study.Subjects.MainPageSubjectsPanVM">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.Subjects.MainPageSubjectsPanVM.Subjects">
+            <inheritdoc/>
+        </member>
+        <member name="T:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM.SubjName">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM.Room">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM.Teacher">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM.Note">
+            <inheritdoc/>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM.saveChangesCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM.SaveChangesCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM.SaveChangesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM.SaveChanges"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM.openSelectTeacherCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM.OpenSelectTeacherCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM.OpenSelectTeacherCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Study.Subjects.NewSubjectPanVM.OpenSelectTeacher"/>.</summary>
+        </member>
+        <member name="T:TaskAppT2._ViewModels.Study.Subjects.SelectTeacherPageVM">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.Subjects.SelectTeacherPageVM.Teachers">
+            <inheritdoc/>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Study.Subjects.SelectTeacherPageVM.selectTeacherCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Study.Subjects.SelectTeacherPageVM.SelectTeacherCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Study.Subjects.SelectTeacherPageVM.SelectTeacherCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Study.Subjects.SelectTeacherPageVM.SelectTeacher(TaskAppT2._Models.Teacher)"/>.</summary>
+        </member>
+        <member name="T:TaskAppT2._ViewModels.Timer.TimerPageVM">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Timer.TimerPageVM.Intervals">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Timer.TimerPageVM.TimeText">
+            <inheritdoc/>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Timer.TimerPageVM.startTimerCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Timer.TimerPageVM.StartTimerCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Timer.TimerPageVM.StartTimerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Timer.TimerPageVM.StartTimer"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Timer.TimerPageVM.stopTimerCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Timer.TimerPageVM.StopTimerCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Timer.TimerPageVM.StopTimerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Timer.TimerPageVM.StopTimer"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Timer.TimerPageVM.dropTimerCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Timer.TimerPageVM.DropTimerCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Timer.TimerPageVM.DropTimerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Timer.TimerPageVM.DropTimer"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Timer.TimerPageVM.closePanEndIntervalCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Timer.TimerPageVM.ClosePanEndIntervalCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Timer.TimerPageVM.ClosePanEndIntervalCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Timer.TimerPageVM.ClosePanEndInterval"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Timer.TimerPageVM.addIntervalsCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Timer.TimerPageVM.AddIntervalsCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Timer.TimerPageVM.AddIntervalsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Timer.TimerPageVM.AddIntervals"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Timer.TimerPageVM.removeIntervalsCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Timer.TimerPageVM.RemoveIntervalsCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Timer.TimerPageVM.RemoveIntervalsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Timer.TimerPageVM.RemoveIntervals"/>.</summary>
+        </member>
+        <member name="T:TaskAppT2._ViewModels.Writes.WritesPageVM">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Writes.WritesPageVM.Notes">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Writes.WritesPageVM.NoteName">
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Writes.WritesPageVM.NoteText">
+            <inheritdoc/>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Writes.WritesPageVM.addNewNoteCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Writes.WritesPageVM.AddNewNoteCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Writes.WritesPageVM.AddNewNoteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Writes.WritesPageVM.AddNewNote"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Writes.WritesPageVM.savedChangesCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Writes.WritesPageVM.SavedChangesCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Writes.WritesPageVM.SavedChangesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Writes.WritesPageVM.SavedChanges"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Writes.WritesPageVM.editNoteCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Writes.WritesPageVM.EditNoteCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Writes.WritesPageVM.EditNoteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Writes.WritesPageVM.EditNote(TaskAppT2._Models.Note)"/>.</summary>
+        </member>
+        <member name="F:TaskAppT2._ViewModels.Writes.WritesPageVM.deleteNoteCommand">
+            <summary>The backing field for <see cref="P:TaskAppT2._ViewModels.Writes.WritesPageVM.DeleteNoteCommand"/>.</summary>
+        </member>
+        <member name="P:TaskAppT2._ViewModels.Writes.WritesPageVM.DeleteNoteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TaskAppT2._ViewModels.Writes.WritesPageVM.DeleteNote"/>.</summary>
+        </member>
+        <member name="T:TaskAppT2.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Cards">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Cards" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NameSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NameSet" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProgressText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProgressText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Failed">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Failed" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ResultFailed">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ResultFailed" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Sucsess">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Sucsess" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ResultSucess">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ResultSucess" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Progress">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Progress" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TextCard">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TextCard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ThisCard">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ThisCard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.RandomDescriptions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "RandomDescriptions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ResultPerProcient">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ResultPerProcient" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TimerText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TimerText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CrossCards">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CrossCards" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CardSets">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CardSets" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CardSetCathegories">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CardSetCathegories" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SetName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SetName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NameCathegory">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NameCathegory" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CardSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CardSet" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Subjects">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Subjects" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SubjName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SubjName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Room">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Room" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Teacher">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Teacher" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Note">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Note" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Teachers">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Teachers" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Intervals">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Intervals" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TimeText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TimeText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Notes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Notes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NoteName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NoteName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NoteText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NoteText" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Cards">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Cards" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NameSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NameSet" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProgressText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProgressText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Failed">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Failed" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ResultFailed">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ResultFailed" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Sucsess">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Sucsess" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ResultSucess">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ResultSucess" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Progress">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Progress" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TextCard">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TextCard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ThisCard">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ThisCard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.RandomDescriptions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "RandomDescriptions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ResultPerProcient">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ResultPerProcient" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TimerText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TimerText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CrossCards">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CrossCards" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CardSets">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CardSets" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CardSetCathegories">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CardSetCathegories" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SetName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SetName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NameCathegory">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NameCathegory" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CardSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CardSet" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Subjects">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Subjects" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SubjName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SubjName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Room">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Room" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Teacher">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Teacher" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Note">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Note" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Teachers">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Teachers" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Intervals">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Intervals" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TimeText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TimeText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Notes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Notes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NoteName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NoteName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NoteText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NoteText" generated properties.</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet"
+             x:DataType="vm:LearnCardSetVM"
+             xmlns:custom="clr-namespace:TaskAppT2.CustomUI"
+             x:Class="TaskAppT2._Views.Study.FlashCards.LearnCardSet.LearnTermWithDescryptionPan">
+    <Grid Margin="0, 0, 0, 15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Text="{Binding ProgressText}"/>
+        <ProgressBar BackgroundColor="{StaticResource GreenUI}"
+                     Progress="{Binding Progress}"
+                     Grid.Row="1"
+                     HeightRequest="3"
+                     Margin="-15, 0, -15, 10"
+                     ProgressColor="{StaticResource Red}"/>
+
+        <Border Grid.Row="2"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"
+                HeightRequest="40"
+                WidthRequest="40"
+                BackgroundColor="{StaticResource RedUI}">
+            <Border.StrokeShape>
+                <Ellipse/>
+            </Border.StrokeShape>
+
+            <Label Text="{Binding Failed}"
+                   FontSize="Medium"
+                   TextColor="{StaticResource Grey}"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+        </Border>
+        <Border Grid.Row="2"
+                VerticalOptions="Start"
+                HorizontalOptions="End"
+                HeightRequest="40"
+                WidthRequest="40"
+                BackgroundColor="{StaticResource GreenUI}">
+            <Border.StrokeShape>
+                <Ellipse/>
+            </Border.StrokeShape>
+
+            <Label Text="{Binding Sucsess}"
+                   FontSize="Medium"
+                   TextColor="{StaticResource Grey}"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+        </Border>
+
+        <Label Text="{Binding ThisCard.Description}"
+               Grid.Row="3"
+               HorizontalOptions="Start"
+               Margin="0, 15, 0, 0"
+               FontAttributes="Bold"/>
+        <Border Grid.Row="4"
+                Margin="0, 15"    
+                BackgroundColor="{StaticResource GreenUI}">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            
+            <custom:EntryWithoutLine Placeholder="Введите ответ здесь"
+                                     x:Name="ResultText"
+                                     Margin="10, 0"/>
+        </Border>
+        <Button Text="Я не знаю("
+                Grid.Row="5"
+                HorizontalOptions="Start"
+                CornerRadius="10"
+                Command="{Binding GoNexCardCommand}"
+                CommandParameter="{x:Boolean false}"
+                BackgroundColor="{StaticResource RedUI}"/>
+        <Button Text="Готово"
+                Grid.Row="5"
+                HorizontalOptions="End"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                Clicked="OnSendRequest"
+                Command="{Binding CheckRequestCommand}"
+                x:DataType="{x:Null}"
+                CommandParameter="{Binding Source={x:Reference ResultText}, Path=Text}"
+                BackgroundColor="{StaticResource GreenUI}"/>
+    </Grid>
+</ContentView>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:TaskAppT2.CustomUI"
+             xmlns:models="clr-namespace:TaskAppT2._Models"
+             xmlns:vm="clr-namespace:TaskAppT2._ViewModels.Study.FlashCards"
+             x:DataType="vm:NewCardSetPanVM"
+             x:Class="TaskAppT2._Views.Study.FlashCards.NewCardSetPan">
+    <Grid Margin="0, 15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <custom:EntryWithMauiUILine Placeholder="Название*"
+                                    Text="{Binding SetName}"
+                                    FontSize="Large"/>
+
+        <CollectionView ItemsSource="{Binding Cards}"
+                        Margin="0, 10"
+                        Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type models:Card}">
+                    <Grid Padding="15"
+                          Margin="0, 5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.Resources>
+                            <Style TargetType="custom:EditorWithGreenLine">
+                                <Setter Property="TextColor" Value="{StaticResource GreenBG}"/>
+                            </Style>
+                            <Style TargetType="Label">
+                                <Setter Property="TextColor" Value="{StaticResource GreenBG}"/>
+                                <Setter Property="FontAttributes" Value="Bold"/>
+                            </Style>
+                        </Grid.Resources>
+
+                        <Border Grid.RowSpan="4"
+                                Grid.ColumnSpan="2"
+                                Margin="-15"
+                                BackgroundColor="{StaticResource MainUI}">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="15"/>
+                            </Border.StrokeShape>
+                        </Border>
+
+                        <custom:EditorWithGreenLine Text="{Binding Term}"
+                                                    AutoSize="TextChanges"/>
+                        <Label Text="Термин"
+                               Grid.Row="1"
+                               Margin="0, 0, 0,20"/>
+                        <custom:EditorWithGreenLine Text="{Binding Description}"
+                                                    AutoSize="TextChanges"
+                                                    Grid.Row="2"/>
+                        <Label Text="Определение"
+                               Grid.Row="3"/>
+                        <ImageButton Source="trash.png"
+                                     Grid.Column="1"
+                                     Grid.RowSpan="4"
+                                     MaximumHeightRequest="40"
+                                     Clicked="OnDeleteCard"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.Footer>
+                <Label Text="Добавить карточку"
+                       x:Name="AddCardLb"
+                       FontAttributes="Bold"
+                       TextDecorations="Underline"
+                       FontSize="Medium"
+                       Margin="10"/>
+            </CollectionView.Footer>
+        </CollectionView>
+        
+        <Button Text="Сохранить"
+                Grid.Row="2"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                CornerRadius="15"
+                MaximumWidthRequest="250"
+                Command="{Binding SaveChangesCommand}"
+                Style="{StaticResource GreenColor}"/>
+    </Grid>
+</ContentView>

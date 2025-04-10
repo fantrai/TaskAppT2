@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskAppT2._Views.Writes.AddNewNoteModalPage"
+             xmlns:ui="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
+             xmlns:custom="clr-namespace:TaskAppT2.CustomUI"
+             xmlns:models="clr-namespace:TaskAppT2._Models"
+             xmlns:vm="clr-namespace:TaskAppT2._ViewModels.Writes"
+             x:DataType="vm:WritesPageVM"
+             BackgroundColor="Transparent"
+             Title="AddNewNoteModalPage">
+    <Grid>
+        <ui:AcrylicView EffectStyle="Custom"                        
+                        TintColor="{StaticResource GreenBG}">
+        </ui:AcrylicView>
+        <Border BackgroundColor="{StaticResource MainUI}" 
+                Stroke="{StaticResource GreenBG}"
+                StrokeThickness="3"
+                Padding="10" 
+                Margin="30, 150">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20"/>
+            </Border.StrokeShape>
+
+            <Grid ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <custom:EntryWithoutLine Placeholder="Заголовок"
+                                           FontSize="Large"
+                                           Grid.ColumnSpan="2"
+                                           TextColor="{StaticResource GreenBG}"
+                                           PlaceholderColor="{StaticResource GreenBG}"
+                                           BackgroundColor="{StaticResource MainUI}"
+                                           Text="{Binding NoteName}"/>
+                <custom:EditorWithMauiUILine Placeholder="Заметка"
+                                             Grid.ColumnSpan="2"
+                                             BackgroundColor="{StaticResource MainUI}"
+                                             Grid.Row="1"
+                                             Text="{Binding NoteText}"/>
+                <Button Text="Удалить"
+                        MaximumWidthRequest="250"
+                        CornerRadius="15"
+                        BackgroundColor="{StaticResource RedUI}"
+                        Command="{Binding DeleteNoteCommand}"
+                        Grid.Row="2"/>
+                <Button Text="Сохранить"
+                        Grid.Column="1"
+                        MaximumWidthRequest="250"
+                        CornerRadius="15"
+                        BackgroundColor="{StaticResource GreenUI}"
+                        Command="{Binding SavedChangesCommand}"
+                        Grid.Row="2"/>
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>

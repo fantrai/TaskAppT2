@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet"
+             x:DataType="vm:LearnCardSetVM"
+             x:Class="TaskAppT2._Views.Study.FlashCards.LearnCardSet.ResultLearnPan">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Text="{Binding ProgressText}"
+               Grid.ColumnSpan="2"/>
+        <ProgressBar BackgroundColor="{StaticResource GreenUI}"
+                     Progress="{Binding Progress}"
+                     Grid.Row="1"
+                     Grid.ColumnSpan="2"
+                     HeightRequest="3"
+                     Margin="-15, 0, -15, 10"
+                     ProgressColor="{StaticResource Red}"/>
+
+        <Label Text="Вы отлично справляетесь!"
+               Margin="0, 20, 0, 0"
+               FontSize="Large"
+               Grid.ColumnSpan="2"
+               Grid.Row="2"
+               FontAttributes="Bold"
+               HorizontalOptions="Start"/>
+        <Label Text="Продолжайте в том же духе!"
+               Margin="0, 0, 0, 20"
+               Grid.Row="3"
+               Grid.ColumnSpan="2"
+               FontSize="Large"
+               FontAttributes="Bold"
+               HorizontalOptions="Start"/>
+
+        <Label Text="Ваш прогресс"
+               Grid.Row="4"
+               FontSize="Medium"
+               FontAttributes="Bold"/>
+
+        <Border BackgroundColor="{StaticResource GreenUI}"
+                HeightRequest="{Binding ResultSucess}"
+                VerticalOptions="End"
+                HorizontalOptions="Start"
+                WidthRequest="20"
+                Grid.Row="5">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="5, 5, 0, 0"/>
+            </Border.StrokeShape>
+        </Border>
+        <Label Text="{Binding ResultPerProcient}"
+               Grid.Row="5"
+               FontSize="Large"
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+        <Border BackgroundColor="{StaticResource RedUI}"
+                HeightRequest="{Binding ResultFailed}"
+                VerticalOptions="End"
+                HorizontalOptions="End"
+                WidthRequest="20"
+                Grid.Row="5">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5, 5, 0, 0"/>
+                </Border.StrokeShape>
+        </Border>
+        <Border Grid.Row="5"
+              Stroke="{StaticResource MainUI}"
+              StrokeThickness="0.5"
+              HorizontalOptions="Fill"
+              VerticalOptions="End"/>
+
+        <VerticalStackLayout Grid.Row="5"
+                             Grid.Column="2"
+                             VerticalOptions="Center"
+                             Margin="20"
+                             Spacing="20">
+            <Border BackgroundColor="{StaticResource GreenUI}"
+                VerticalOptions="Start"
+                Padding="10, 5">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Grid>
+                    <Label Text="Изучено"
+                       HorizontalOptions="Start"/>
+                    <Label Text="{Binding Sucsess}"
+                       FontAttributes="Bold"
+                       HorizontalOptions="End"/>
+                </Grid>
+            </Border>
+            <Border BackgroundColor="{StaticResource RedUI}"
+                VerticalOptions="Start"
+                Padding="10, 5">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Grid>
+                    <Label Text="В процессе изучения"
+                       HorizontalOptions="Start"/>
+                    <Label Text="{Binding Failed}"
+                       FontAttributes="Bold"
+                       HorizontalOptions="End"/>
+                </Grid>
+            </Border>
+        </VerticalStackLayout>
+
+        <Button Text="Пройти снова"
+                Background="{StaticResource GreenUI}"
+                Grid.ColumnSpan="2"
+                WidthRequest="300"
+                CornerRadius="10"
+                Margin="5"
+                Clicked="OnRetrySet"
+                FontAttributes="Bold"
+                Grid.Row="7"/>
+        <Button Text="Вернуться к набору"
+                BorderColor="{StaticResource MainUI}"
+                Grid.ColumnSpan="2"
+                WidthRequest="300"
+                CornerRadius="10"
+                Margin="0, 5, 0, 15"
+                FontAttributes="Bold"
+                Clicked="OnBackToSet"
+                Grid.Row="8"/>
+    </Grid>
+</ContentView>

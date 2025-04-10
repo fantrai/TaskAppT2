@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:TaskAppT2.CustomUI"
+             xmlns:vm="clr-namespace:TaskAppT2._ViewModels.Study.FlashCards"
+             xmlns:models="clr-namespace:TaskAppT2._Models"
+             x:DataType="vm:MainPageFlashCardsPanVM"
+             x:Class="TaskAppT2.MainMenu.Study.FlashCards.MainPageFlashCardsPan">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <custom:EntryWithoutLine Placeholder="Поиск" 
+                                 Grid.ColumnSpan="3"
+                                 TextChanged="OnChangeFind"
+                                 ReturnType="Search"/>
+
+        <Border HorizontalOptions="Fill"
+                Grid.ColumnSpan="3"
+                Grid.Row="1"
+                StrokeThickness="1"
+                Stroke="{StaticResource MainUI}"
+                Margin="-16, 0"/>
+        <Button Text="+"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                Clicked="OnClickAddNewCathegory"
+                Grid.Row="1"/>
+        <Border HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Grid.Row="1"
+                Grid.Column="1"
+                StrokeThickness="0.5"
+                Margin="0, 5"
+                Stroke="{StaticResource MainUI}"/>
+
+        <CollectionView x:Name="CathegoryCV"
+                     Grid.Row="1"
+                     ItemsSource="{Binding CardSetCathegories}"
+                     Grid.Column="2"
+                     VerticalOptions="Center"
+                     SelectionMode="Single">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.Resources>
+                <Style TargetType="Button" ApplyToDerivedTypes="True">
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="TextColor" Value="{StaticResource MainUI}"/>
+                    <Setter Property="BackgroundColor" Value="Transparent"/>
+                    <Setter Property="VerticalOptions" Value="Center"/>
+                    <Setter Property="FontFamily" Value="Inter"/>
+                    <Setter Property="VisualStateManager.VisualStateGroups">
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CathegoryButtons">
+                                <VisualState x:Name="Select">
+                                    <VisualState.Setters>
+                                        <Setter Property="FontAttributes" Value="Bold" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="NoSelect">
+                                    <VisualState.Setters>
+                                        <Setter Property="FontAttributes" Value="None" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="PointerOver" />
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </Setter>
+                </Style>
+
+                <Style TargetType="Label">
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="TextColor" Value="{StaticResource MainUI}"/>
+                    <Setter Property="BackgroundColor" Value="Transparent"/>
+                    <Setter Property="VerticalOptions" Value="Center"/>
+                    <Setter Property="FontFamily" Value="Inter"/>
+                    <Setter Property="VisualStateManager.VisualStateGroups">
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="FontAttributes" Value="Bold"/>
+                                        <Setter Property="BackgroundColor" Value="Transparent"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </Setter>
+                </Style>
+            </CollectionView.Resources>
+
+            <CollectionView.Header>
+                <Button Text="Все наборы" 
+                                    x:Name="StartCarhegory"
+                                    Clicked="OnAllSets"/>
+            </CollectionView.Header>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type models:CardSetCathegory}">
+                    <Label Text="{Binding Name}"
+                           VerticalOptions="Center"
+                           VerticalTextAlignment="Center"
+                           Margin="0"
+                           Padding="5"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label Text="Создать новый набор"
+                   Grid.Row="2"
+                   Grid.ColumnSpan="3"
+                   FontSize="Medium"
+                   x:Name="AddNewCardSet"
+                   FontAttributes="Bold"
+                   TextDecorations="Underline"
+                   Margin="10"/>
+        <Label Text="Добавить набор в папку"
+                   Grid.Row="2"
+                   Grid.ColumnSpan="3"
+                   FontSize="Medium"
+                   x:Name="AddCardSetInGroup"
+                   FontAttributes="Bold"
+                   TextDecorations="Underline"
+                   IsVisible="False"
+                   Margin="10"/>
+
+
+        <CollectionView Grid.Row="3"
+                        Grid.ColumnSpan="3"
+                        ItemsSource="{Binding CardSets}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type models:CardSet}">
+                    <Border BackgroundColor="{StaticResource MainUI}"
+                                Margin="0, 0, 0, 10"
+                                Padding="10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+
+                        <Grid MinimumHeightRequest="100">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Button Grid.RowSpan="3"
+                                        Clicked="OnClickOpenCardSet"
+                                        HorizontalOptions="Fill"
+                                        VerticalOptions="Fill"
+                                        Margin="0, 0, 10, 0"/>
+
+                            <Label Text="{Binding Name}"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Start"
+                                       FontSize="Medium"
+                                       TextColor="{StaticResource GreenBG}"/>
+                            <Label Text="{Binding Cards.Count}"
+                                       TextColor="{StaticResource GreenBG}"
+                                       HorizontalOptions="Start"
+                                       Grid.RowSpan="2"
+                                       Grid.Row="1"/>
+                            <Button ImageSource="edit.png"
+                                        Padding="0"
+                                        Margin="0"
+                                        MaximumHeightRequest="20"
+                                        Clicked="OnClickEditCardSet"
+                                        Grid.Column="1"/>
+                            <Button ImageSource="trash.png"
+                                        Padding="0"
+                                        Margin="0"
+                                        MaximumHeightRequest="20"
+                                        Clicked="OnClickedDeleteCardSet"
+                                        Grid.Column="1"
+                                        Grid.Row="1"/>
+                            <!--<Button ImageSource="folder_add.png"
+                                        Padding="0"
+                                        Margin="0"
+                                        MaximumHeightRequest="20"
+                                        Grid.Column="1"
+                                        Grid.Row="2"
+                                        Clicked="EditCardSet"/>-->
+                        </Grid>
+                    </Border>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentView>

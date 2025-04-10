@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:TaskAppT2.CustomUI"
+             xmlns:vm ="clr-namespace:TaskAppT2._ViewModels.Writes"
+             x:DataType="vm:WritesPageVM"
+             xmlns:models="clr-namespace:TaskAppT2._Models"
+             x:Class="TaskAppT2._Views.Writes.WritePage"
+             Title="WritePage">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border BackgroundColor="{StaticResource MainUI}">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15"/>
+            </Border.StrokeShape>
+            
+            <custom:EntryWithoutLine TextColor="{StaticResource GreenBG}"
+                                     Placeholder="Поиск среди заметок"
+                                     TextChanged="OnChangeFindText"
+                                     PlaceholderColor="{StaticResource GreenBG}"
+                                     Margin="10, 0, 40, 0"/>
+        </Border>
+        <Image Source="search_normal.png" 
+               x:Name="ChangeSearchText"
+               HorizontalOptions="End"
+               MaximumHeightRequest="30"
+               Margin="10, 0"/>
+
+        <CollectionView ItemsSource="{Binding Notes}"
+                        Margin="0, 10, 0, 0"
+                        Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type models:Note}">
+                    <Grid Margin="0, 5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.RowSpan="2"
+                                CornerRadius="15"
+                                CommandParameter="{Binding}"
+                                x:DataType="{x:Null}"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:WritesPageVM}}, Path=EditNoteCommand}"
+                                BackgroundColor="{StaticResource MainUI}"/>
+                        <Label Text="{Binding Name}"
+                               Margin="15, 5"
+                               FontAttributes="Bold"
+                               FontSize="Medium"
+                               HorizontalOptions="Start"
+                               TextColor="{StaticResource GreenBG}"/>
+                        <Label Text="{Binding Text}"
+                               HorizontalOptions="Start"
+                               Grid.Row="1"
+                               Margin="15, 5"
+                               TextColor="{StaticResource GreenBG}"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="+"
+                Grid.Row="1"
+                CornerRadius="999"
+                FontSize="Title"
+                FontAttributes="Bold"
+                HeightRequest="70"
+                WidthRequest="70"
+                BackgroundColor="{StaticResource GreenUI}"
+                TextColor="{StaticResource MainUI}"
+                Command="{Binding AddNewNoteCommand}"
+                VerticalOptions="End"
+                HorizontalOptions="End"/>
+    </Grid>
+</ContentPage>

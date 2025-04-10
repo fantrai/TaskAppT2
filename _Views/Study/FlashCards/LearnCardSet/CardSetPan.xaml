@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:TaskAppT2._Models"
+             xmlns:vm="clr-namespace:TaskAppT2._ViewModels.Study.FlashCards.LearnCardSet"
+             x:DataType="vm:CardSetPanVM"
+             x:Class="TaskAppT2._Views.Study.FlashCards.LearnCardSet.CardSetPan">
+    <Grid>
+        <ScrollView VerticalScrollBarVisibility="Never"
+                    HorizontalScrollBarVisibility="Never"
+                    Margin="0, 20, 0, 0">
+            <VerticalStackLayout Spacing="10">
+                <CarouselView ItemsSource="{Binding Cards}"
+                              Margin="-10, 0"
+                              HorizontalScrollBarVisibility="Never">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Card">
+                            <Button BackgroundColor="{StaticResource MainUI}"
+                                    Margin="10"
+                                    LineBreakMode="WordWrap"
+                                    CornerRadius="20"
+                                    Padding="20"
+                                    FontAttributes="Bold"
+                                    FontSize="Medium"   
+                                    MinimumHeightRequest="200"
+                                    TextColor="{StaticResource GreenBG}"
+                                    Clicked="SwitchView"
+                                    Text="{Binding Term}"/>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <!--<IndicatorView x:Name="Iv"
+                               IndicatorColor="{StaticResource MainUI}"
+                               SelectedIndicatorColor="{StaticResource GreenUI}"
+                               HorizontalOptions="Center">-->
+                <!--</IndicatorView>-->
+                <Label Text="{Binding NameSet}"
+                       HorizontalOptions="Start"
+                       FontSize="Medium" FontAttributes="Bold"/>
+
+                <HorizontalStackLayout>
+                    <Label Text="{Binding Cards.Count}"
+                       HorizontalOptions="Start"
+                       FontSize="Small"/>
+                    <Label Text=" термина"
+                       HorizontalOptions="Start"
+                       FontSize="Small"/>
+                </HorizontalStackLayout>
+
+                <Grid Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button BackgroundColor="{StaticResource MainUI}"
+                            Grid.ColumnSpan="2"
+                            Margin="-10"
+                            Clicked="OnStartLearnFlashCards"
+                            CornerRadius="10"/>
+                    <Image Source="flash_cards.png" HeightRequest="30"/>
+                    <Label Text="Flash-карточки"
+                           Margin="10, 0"
+                           FontSize="Small"
+                           Grid.Column="1"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           VerticalTextAlignment="Center"
+                           TextColor="{StaticResource GreenBG}"/>
+                </Grid>
+
+                <Grid Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button BackgroundColor="{StaticResource MainUI}"
+                            Grid.ColumnSpan="2"
+                            Margin="-10"
+                            Clicked="OnStartLearnTermForDescripton"
+                            CornerRadius="10"/>
+                    <Image Source="return_termin.png" HeightRequest="30"/>
+                    <Label Text="Определение к термину"
+                           Margin="10, 0"
+                           FontSize="Small"
+                           Grid.Column="1"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           VerticalTextAlignment="Center"
+                           TextColor="{StaticResource GreenBG}"/>
+                </Grid>
+
+                <Grid Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button BackgroundColor="{StaticResource MainUI}"
+                            Grid.ColumnSpan="2"
+                            Margin="-10"
+                            Clicked="OnStartLearnDescriptionWithTerm"
+                            CornerRadius="10"/>
+                    <Image Source="termin_description.png" HeightRequest="30"/>
+                    <Label Text="Термин к определению"
+                           Margin="10, 0"
+                           FontSize="Small"
+                           Grid.Column="1"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           VerticalTextAlignment="Center"
+                           TextColor="{StaticResource GreenBG}"/>
+                </Grid>
+
+                <Grid Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button BackgroundColor="{StaticResource MainUI}"
+                            Grid.ColumnSpan="2"
+                            Margin="-10"
+                            Clicked="OnStartLearnCrossing"
+                            CornerRadius="10"/>
+                    <Image Source="link.png" HeightRequest="30"/>
+                    <Label Text="Совместить определения и термины"
+                           Margin="10, 0"
+                           FontSize="Small"
+                           Grid.Column="1"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           VerticalTextAlignment="Center"
+                           TextColor="{StaticResource GreenBG}"/>
+                </Grid>
+
+                <Label Text="Все карточки"
+                       HorizontalOptions="Start"
+                       FontSize="Medium" FontAttributes="Bold"/>
+
+                <CollectionView ItemsSource="{Binding Cards}"
+                              HorizontalScrollBarVisibility="Never"
+                              VerticalScrollBarVisibility="Never">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Card">
+                            <Grid Padding="10" Margin="0, 5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Border BackgroundColor="{StaticResource MainUI}"
+                                                Margin="-10"
+                                                Grid.RowSpan="2">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="10"/>
+                                    </Border.StrokeShape>
+                                </Border>
+                                <Label Text="{Binding Term}"
+                                               FontAttributes="Bold"
+                                               HorizontalOptions="Start"
+                                               TextColor="{StaticResource GreenBG}"/>
+                                <Label Text="{Binding Description}"
+                                               Grid.Row="1"
+                                               HorizontalOptions="Start"
+                                               TextColor="{StaticResource GreenBG}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentView>
