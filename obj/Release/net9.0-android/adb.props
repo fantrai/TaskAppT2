@@ -1,2 +1,2 @@
-AdbTarget=
+AdbTarget=-s RF8R80Y5RHK
 AdbOptions=

@@ -577,3 +577,4 @@ D:\_projects\MAUI\TaskAppT2\obj\Release\net9.0-android\resizetizer\f\Inter.ttf
 D:\_projects\MAUI\TaskAppT2\obj\Release\net9.0-android\resizetizer\FD647C23AC4E21EB-files.cache
 D:\_projects\MAUI\TaskAppT2\obj\Release\net9.0-android\assets\FluentUI.cs
 D:\_projects\MAUI\TaskAppT2\obj\Release\net9.0-android\assets\Inter.ttf
+D:\_projects\MAUI\TaskAppT2\obj\Release\net9.0-android\TaskAppT2.sourcelink.json
