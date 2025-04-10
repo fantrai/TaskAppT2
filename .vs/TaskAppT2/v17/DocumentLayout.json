@@ -47,8 +47,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-30T17:49:09.661Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -89,8 +88,7 @@
               "RelativeToolTip": "_Views\\Study\\FlashCards\\MainPageFlashCardsPan.xaml",
               "ViewState": "AgIAAHgAAAAAAAAAAAAAAIEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-10T09:31:31.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T09:31:31.985Z"
             },
             {
               "$type": "Document",
@@ -102,8 +100,7 @@
               "RelativeToolTip": "_Views\\Timer\\TimerPage.xaml",
               "ViewState": "AgIAAGwAAAAAAAAAAAAAAHIAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-10T09:20:17.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T09:20:17.082Z"
             },
             {
               "$type": "Document",
@@ -115,8 +112,7 @@
               "RelativeToolTip": "_Views\\Timer\\EndIntervalModalPage.xaml",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-10T09:18:02.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T09:18:02.854Z"
             },
             {
               "$type": "Document",
