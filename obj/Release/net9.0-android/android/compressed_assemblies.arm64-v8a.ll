@@ -306,7 +306,7 @@ target triple = "aarch64-unknown-linux-android21"
 		ptr @__compressedAssemblyData_56; uint8_t* data
 	}, ; 56: Microsoft.Extensions.Primitives
 	%struct.CompressedAssemblyDescriptor {
-		i32 58368, ; uint32_t uncompressed_file_size
+		i32 58880, ; uint32_t uncompressed_file_size
 		i1 false, ; bool loaded
 		ptr @__compressedAssemblyData_57; uint8_t* data
 	}, ; 57: Microsoft.Maui.Controls.Compatibility
@@ -889,7 +889,7 @@ target triple = "aarch64-unknown-linux-android21"
 @__compressedAssemblyData_54 = internal dso_local global [37888 x i8] zeroinitializer, align 1
 @__compressedAssemblyData_55 = internal dso_local global [17408 x i8] zeroinitializer, align 1
 @__compressedAssemblyData_56 = internal dso_local global [9216 x i8] zeroinitializer, align 1
-@__compressedAssemblyData_57 = internal dso_local global [58368 x i8] zeroinitializer, align 1
+@__compressedAssemblyData_57 = internal dso_local global [58880 x i8] zeroinitializer, align 1
 @__compressedAssemblyData_58 = internal dso_local global [1868832 x i8] zeroinitializer, align 1
 @__compressedAssemblyData_59 = internal dso_local global [128040 x i8] zeroinitializer, align 1
 @__compressedAssemblyData_60 = internal dso_local global [792096 x i8] zeroinitializer, align 1

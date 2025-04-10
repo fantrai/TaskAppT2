@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7TJySgW03KI=",
+  "dgSpecHash": "L6YkP6aYBKw=",
   "success": true,
   "projectFilePath": "D:\\_projects\\MAUI\\TaskAppT2\\TaskAppT2.csproj",
   "expectedPackageFiles": [
@@ -34,7 +34,7 @@
     "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.io.recyclablememorystream\\3.0.1\\microsoft.io.recyclablememorystream.3.0.1.nupkg.sha512",
     "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.maui.controls\\9.0.50\\microsoft.maui.controls.9.0.50.nupkg.sha512",
     "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\9.0.50\\microsoft.maui.controls.build.tasks.9.0.50.nupkg.sha512",
-    "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.maui.controls.compatibility\\8.0.7\\microsoft.maui.controls.compatibility.8.0.7.nupkg.sha512",
+    "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.maui.controls.compatibility\\9.0.50\\microsoft.maui.controls.compatibility.9.0.50.nupkg.sha512",
     "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.maui.controls.core\\9.0.50\\microsoft.maui.controls.core.9.0.50.nupkg.sha512",
     "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.maui.controls.xaml\\9.0.50\\microsoft.maui.controls.xaml.9.0.50.nupkg.sha512",
     "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.maui.core\\9.0.50\\microsoft.maui.core.9.0.50.nupkg.sha512",
@@ -150,7 +150,11 @@
     "C:\\Users\\fantrai\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.9.0.2\\xamarin.kotlinx.coroutines.core.jvm.1.9.0.2.nupkg.sha512",
     "C:\\Users\\fantrai\\.nuget\\packages\\xamarin.kotlinx.serialization.core\\1.7.3.2\\xamarin.kotlinx.serialization.core.1.7.3.2.nupkg.sha512",
     "C:\\Users\\fantrai\\.nuget\\packages\\xamarin.kotlinx.serialization.core.jvm\\1.7.3.2\\xamarin.kotlinx.serialization.core.jvm.1.7.3.2.nupkg.sha512",
-    "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512"
+    "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\9.0.3\\microsoft.netcore.app.crossgen2.win-x64.9.0.3.nupkg.sha512",
+    "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512",
+    "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.3\\microsoft.aspnetcore.app.runtime.win-x64.9.0.3.nupkg.sha512",
+    "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\9.0.3\\microsoft.windowsdesktop.app.runtime.win-x64.9.0.3.nupkg.sha512",
+    "C:\\Users\\fantrai\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\9.0.3\\microsoft.netcore.app.runtime.win-x64.9.0.3.nupkg.sha512"
   ],
   "logs": []
 }
