@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "D:\\_projects\\MAUI\\TaskAppT2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|d:\\_projects\\maui\\taskappt2\\taskappt2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|solutionrelative:taskappt2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|d:\\_projects\\maui\\taskappt2\\_viewmodels\\timer\\timerpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|solutionrelative:_viewmodels\\timer\\timerpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|d:\\_projects\\maui\\taskappt2\\taskappt2.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|solutionrelative:taskappt2.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|d:\\_projects\\maui\\taskappt2\\_views\\study\\flashcards\\mainpageflashcardspan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|solutionrelative:_views\\study\\flashcards\\mainpageflashcardspan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|d:\\_projects\\maui\\taskappt2\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|d:\\_projects\\maui\\taskappt2\\_views\\timer\\timerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|solutionrelative:_views\\timer\\timerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|d:\\_projects\\maui\\taskappt2\\_views\\timer\\endintervalmodalpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|solutionrelative:_views\\timer\\endintervalmodalpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|d:\\_projects\\maui\\taskappt2\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|d:\\_projects\\maui\\taskappt2\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{733D13A6-DC30-4C96-A2A2-5DAC2A31CDB7}|TaskAppT2.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 85,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "D:\\_projects\\MAUI\\TaskAppT2\\MauiProgram.cs",
               "RelativeDocumentMoniker": "MauiProgram.cs",
@@ -44,7 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "D:\\_projects\\MAUI\\TaskAppT2\\AppShell.xaml",
               "RelativeDocumentMoniker": "AppShell.xaml",
@@ -53,12 +61,7 @@
               "ViewState": "AgIAABYAAAAAAAAAAABIwCgAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-09T19:37:11.314Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{13b29bd0-3807-335c-9cad-ba55364c29cb}"
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -73,28 +76,59 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TaskAppT2.csproj",
-              "DocumentMoniker": "D:\\_projects\\MAUI\\TaskAppT2\\TaskAppT2.csproj",
-              "RelativeDocumentMoniker": "TaskAppT2.csproj",
-              "ToolTip": "D:\\_projects\\MAUI\\TaskAppT2\\TaskAppT2.csproj",
-              "RelativeToolTip": "TaskAppT2.csproj",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIYAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-10T02:28:30.132Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{13b29bd0-3807-335c-9cad-ba55364c29cb}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TaskAppT2",
-              "DocumentMoniker": "D:\\_projects\\MAUI\\TaskAppT2\\TaskAppT2.csproj",
-              "RelativeDocumentMoniker": "TaskAppT2.csproj",
-              "ToolTip": "D:\\_projects\\MAUI\\TaskAppT2\\TaskAppT2.csproj",
-              "RelativeToolTip": "TaskAppT2.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-10T02:19:17.068Z",
+              "Title": "MainPageFlashCardsPan.xaml",
+              "DocumentMoniker": "D:\\_projects\\MAUI\\TaskAppT2\\_Views\\Study\\FlashCards\\MainPageFlashCardsPan.xaml",
+              "RelativeDocumentMoniker": "_Views\\Study\\FlashCards\\MainPageFlashCardsPan.xaml",
+              "ToolTip": "D:\\_projects\\MAUI\\TaskAppT2\\_Views\\Study\\FlashCards\\MainPageFlashCardsPan.xaml",
+              "RelativeToolTip": "_Views\\Study\\FlashCards\\MainPageFlashCardsPan.xaml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-10T09:31:31.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TimerPage.xaml",
+              "DocumentMoniker": "D:\\_projects\\MAUI\\TaskAppT2\\_Views\\Timer\\TimerPage.xaml",
+              "RelativeDocumentMoniker": "_Views\\Timer\\TimerPage.xaml",
+              "ToolTip": "D:\\_projects\\MAUI\\TaskAppT2\\_Views\\Timer\\TimerPage.xaml",
+              "RelativeToolTip": "_Views\\Timer\\TimerPage.xaml",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAHIAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-10T09:20:17.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EndIntervalModalPage.xaml",
+              "DocumentMoniker": "D:\\_projects\\MAUI\\TaskAppT2\\_Views\\Timer\\EndIntervalModalPage.xaml",
+              "RelativeDocumentMoniker": "_Views\\Timer\\EndIntervalModalPage.xaml",
+              "ToolTip": "D:\\_projects\\MAUI\\TaskAppT2\\_Views\\Timer\\EndIntervalModalPage.xaml",
+              "RelativeToolTip": "_Views\\Timer\\EndIntervalModalPage.xaml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-10T09:18:02.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TimerPageVM.cs",
+              "DocumentMoniker": "D:\\_projects\\MAUI\\TaskAppT2\\_ViewModels\\Timer\\TimerPageVM.cs",
+              "RelativeDocumentMoniker": "_ViewModels\\Timer\\TimerPageVM.cs",
+              "ToolTip": "D:\\_projects\\MAUI\\TaskAppT2\\_ViewModels\\Timer\\TimerPageVM.cs",
+              "RelativeToolTip": "_ViewModels\\Timer\\TimerPageVM.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAMwCcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T09:15:56.183Z",
               "EditorCaption": ""
             }
           ]

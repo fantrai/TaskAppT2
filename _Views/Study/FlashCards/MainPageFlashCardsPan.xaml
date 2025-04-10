@@ -127,7 +127,7 @@
                    FontAttributes="Bold"
                    TextDecorations="Underline"
                    Margin="10"/>
-        <Label Text="Добавить набор в папку"
+        <Label Text="Управление папкой"
                    Grid.Row="2"
                    Grid.ColumnSpan="3"
                    FontSize="Medium"

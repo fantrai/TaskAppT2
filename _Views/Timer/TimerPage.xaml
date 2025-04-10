@@ -112,6 +112,7 @@
                                 <Label Grid.ColumnSpan="3"
                                        FontSize="Medium"
                                        FontAttributes="Bold"
+                                       HorizontalOptions="Center"
                                        VerticalOptions="Center"
                                        TextColor="{StaticResource GreenBG}"
                                        Text="Таймер фокуса">

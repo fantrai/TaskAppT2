@@ -38,9 +38,9 @@ namespace TaskAppT2._ViewModels.Timer
         public partial string TimeText { get; set; } = "0:0";
 
         readonly LocalDataBase db;
-        System.Timers.Timer timer = new System.Timers.Timer();
+        readonly System.Timers.Timer timer = new();
         DateTime time;
-        static float TIMER_INTERVAL = 1000f;
+        const float TIMER_INTERVAL = 1000f;
         Interval? selectInterval;
         EndIntervalModalPage? endModalPage;
 
@@ -86,6 +86,7 @@ namespace TaskAppT2._ViewModels.Timer
                 else 
                 {
                     StopTimer();
+                    selectInterval = null;
                     Shell.Current.Navigation.PushModalAsync(endModalPage ??= new EndIntervalModalPage());
                 }
             }
@@ -95,7 +96,10 @@ namespace TaskAppT2._ViewModels.Timer
         void ClosePanEndInterval()
         {
             Shell.Current.Navigation.PopModalAsync();
-            StartTimer();
+            if (Intervals.LastOrDefault() == selectInterval)
+            {
+                StartTimer();
+            } 
         }
 
         [RelayCommand]
